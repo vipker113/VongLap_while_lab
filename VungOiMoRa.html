@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, .alibaba {
+            background-color: aquamarine;
+        }
+        .alibaba {
+            width: 240px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        input, button {
+            width: 172px;
+            padding: 4px 20px;
+            margin-top: 12px;
+        }
+        button {
+            width: 216px;
+            background-color: blue;
+            color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <div class="alibaba">
+        <img id="door" src="/images/door-close.png" alt="">
+        <input id="ThanChu" type="text" placeholder="Nhập thần chú để mở cửa !!">
+        <button onclick="umbala()">Mở Cửa</button>
+    </div>
+    <script>
+        function umbala(){
+            let password="123456";
+            let pass= document.getElementById("ThanChu").value;
+            while(pass !== password) {
+                alert("Password dễ thế mà mày cũng quên được -_-")
+                document.getElementById("ThanChu").reset();
+                pass= document.getElementById("ThanChu").value;
+                // let pass2=prompt("Sai rồi nhập lại dùm -_-");
+                // pass= pass2;
+            }
+            document.getElementById("door").src="/images/door-open.jpg"
+            // document.getElementById("ThanChu").value=pass
+        }
+    </script>
+</body>
+</html>
